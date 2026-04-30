@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { X, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const traditionalMethods = [
-  'Planilhas e controle de gastos',
-  'Cortar cafézinho e pequenos prazeres',
-  'Trabalhar mais horas',
-  'Cursos de educação financeira',
-  'Força de vontade e disciplina',
+  'Controlar gastos e organizar planilhas.',
+  'Cortar pequenos prazeres do dia a dia.',
+  'Trabalhar mais horas tentando compensar.',
+  'Buscar mais conhecimento financeiro.',
+  'E ainda assim tentar manter disciplina.',
 ]
 
 export function BreakthroughSection() {
@@ -19,12 +19,14 @@ export function BreakthroughSection() {
       
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column - The Problem */}
+          
+          {/* LEFT COLUMN */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="opacity-80"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               Por que os métodos{' '}
@@ -32,12 +34,17 @@ export function BreakthroughSection() {
               <span className="text-gold-gradient">não funcionam?</span>
             </h2>
             
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              Você já tentou de tudo: planilhas, cortes, trabalho extra. 
-              Mas nada parece funcionar de verdade. E existe uma razão para isso.
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              Você muda a estratégia, tenta ser mais disciplinado, ajusta o que está ao seu alcance…
+              mas os resultados continuam girando em torno do mesmo ponto.
             </p>
 
-            {/* Traditional Methods List */}
+            {/* MICRO COPY */}
+            <p className="text-foreground mb-6">
+              Em algum momento, você já tentou coisas como:
+            </p>
+
+            {/* LISTA */}
             <ul className="space-y-4">
               {traditionalMethods.map((method, index) => (
                 <motion.li
@@ -45,56 +52,66 @@ export function BreakthroughSection() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center gap-3 text-muted-foreground"
+                  transition={{ duration: 0.4, delay: index * 0.08 }}
+                  className="flex items-center gap-3 text-foreground/90"
                 >
-                  <div className="w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
-                    <X className="w-3.5 h-3.5 text-red-400" />
-                  </div>
+                  {/* DOT NEUTRO */}
+          <div className="w-6 h-6 rounded-full bg-[#D4AF37]/50 flex items-center justify-center flex-shrink-0">
+            <div className="w-2 h-2 rounded-full bg-[#D4AF37]/90" />
+          </div>
+
                   <span>{method}</span>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Right Column - The Truth */}
+          {/* RIGHT COLUMN */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
             className="relative"
           >
             <div className="p-8 rounded-3xl glass border-[#D4AF37]/10 glow-gold-soft">
               <div className="absolute -top-3 -right-3 w-24 h-24 bg-[#D4AF37]/10 rounded-full blur-2xl" />
               
               <h3 className="text-2xl sm:text-3xl font-bold mb-6 relative z-10">
-                A verdade que ninguém te contou
+                Mas o que realmente está por trás dos seus resultados
               </h3>
               
               <div className="space-y-6 relative z-10">
+                
                 <p className="text-foreground leading-relaxed">
-                  <span className="text-[#D4AF37] font-semibold">95% das suas decisões financeiras</span>{' '}
-                  são tomadas pelo seu inconsciente — antes mesmo de você pensar conscientemente sobre elas.
+                  A maior parte das suas decisões financeiras acontece sem que você perceba.
                 </p>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  Suas crenças sobre dinheiro foram programadas na infância, 
-                  através das palavras, atitudes e emoções das pessoas ao seu redor.
+
+                <p className="text-foreground leading-relaxed">
+                  <span className="text-[#D4AF37] font-semibold">Antes mesmo disso,</span>{' '}
+                  sua mente já segue padrões construídos ao longo da sua vida.
                 </p>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  Enquanto você não reprogramar esses padrões profundos, 
-                  <span className="text-foreground font-medium"> qualquer método externo será apenas um paliativo temporário.</span>
+
+                <p className="text-foreground/80 leading-relaxed">
+                  Esses padrões foram moldados por experiências, referências e interpretações que você carrega há anos.
+                </p>
+
+                <p className="text-foreground/80 leading-relaxed">
+                  E enquanto isso continuar no automático,
+                  <span className="text-foreground font-medium">
+                    {' '}qualquer mudança externa tende a voltar ao mesmo ponto.
+                  </span>
                 </p>
 
                 <div className="flex items-center gap-2 text-[#D4AF37] font-medium pt-2">
-                  <span>A mudança real começa de dentro para fora</span>
+                  <span>Não é sobre fazer mais — é aqui que a mudança começa a acontecer.</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
+
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

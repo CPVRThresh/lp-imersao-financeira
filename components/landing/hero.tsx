@@ -35,7 +35,7 @@ export function Hero() {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl" />
       
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 pt-24 pb-12 lg:pt-32 lg:pb-40">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 pt-24 pb-12 lg:pt-32 lg:pb-16">
         
         {/* MOBILE LAYOUT - Nome/Cargo ACIMA da imagem */}
         <div className="lg:hidden">
@@ -69,81 +69,119 @@ export function Hero() {
           </motion.div>
 
           {/* Title - Mobile (fonts increased 20%) */}
+          <div className="lg:hidden">
+          {/* Lot Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center mb-5"
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mb-6 pt-2"
           >
-            {/* Lot Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full glass border-[#D4AF37]/30">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-[#D4AF37]/30">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
               </span>
-              <span className="text-base font-semibold text-[#D4AF37]">LOTE 01 - Vagas Limitadas</span>
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl font-extrabold leading-[1.1] tracking-tight mb-4 text-balance">
-              <span className="text-gold-gradient">GARANTA SEU INGRESSO</span>
-              <br />
-              <span className="text-foreground">NO LOTE 01</span>
-            </h1>
-          </motion.div>
 
-          {/* Subheadline - Mobile (fonts increased 20%) */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg sm:text-xl text-muted-foreground text-center max-w-md mx-auto mb-5 leading-relaxed text-balance"
-          >
-            1 dia para você se libertar de todas as feridas emocionais e travas que te impedem de ter uma vida próspera e feliz...
-          </motion.p>
-
-          {/* Event Info - Mobile (fonts increased 20%) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center gap-3 mb-6 text-base"
-          >
-            <div className="flex items-center gap-2 px-3 py-2 rounded-xl glass border-white/5">
-              <span className="text-[#D4AF37] font-semibold">Ao vivo</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Calendar className="w-4 h-4 text-[#D4AF37]" />
-              <span className="font-medium">26/04 às 9h</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MapPin className="w-4 h-4 text-[#D4AF37]" />
-              <span>Blumenau - SC</span>
+              <span className="text-sm font-semibold text-[#D4AF37] tracking-wide">
+                Acesso limitado nesta edição
+              </span>
             </div>
           </motion.div>
 
-          {/* CTA - Mobile */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col items-center gap-3"
-          >
-            <Button
-              onClick={scrollToCTA}
-              size="lg"
-              className="w-full max-w-sm bg-[#D4AF37] hover:bg-[#E5C158] text-[#0f0f14] font-bold text-xl px-10 py-7 rounded-xl pulse-gold transition-all hover:scale-105 shadow-xl shadow-[#D4AF37]/25"
+            {/* Main Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl sm:text-5xl font-extrabold leading-[1.15] tracking-tight mb-5 text-center text-balance pt-1 pb-1"
             >
-              Garantir vaga agora
-            </Button>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <span className="text-base">Por apenas</span>
-              <span className="text-3xl font-bold text-[#D4AF37]">R$ 47</span>
-            </div>
-          </motion.div>
+              <span className="text-gold-gradient block ">
+                NÃO É FALTA DE ESFORÇO
+              </span>
+
+              <span className="text-foreground block mt-2">
+                É UM PADRÃO INVISÍVEL QUE ESTÁ TRAVANDO SUA VIDA
+              </span>
+            </motion.h1>
+
+            {/* Subheadline (MESMA ESTRUTURA DO DESKTOP) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg sm:text-xl text-muted-foreground text-center max-w-md mx-auto leading-relaxed"
+            >
+              Você já tentou mudar de estratégia… deu seu máximo, recomeçou várias vezes… mas nada realmente muda.
+
+              <div className="mt-4 text-[#D4AF37] font-medium">
+                E quanto mais você tenta, mais parece que está preso num ciclo que se repete.
+              </div>
+
+              <div className="mt-4 text-sm sm:text-base text-muted-foreground">
+                E é isso que você vai descobrir neste encontro.
+              </div>
+            </motion.div>
+
+            {/* CTA + VALUE */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col items-center gap-4 mt-8"
+            >
+
+              <Button
+                onClick={scrollToCTA}
+                size="lg"
+                className="w-full max-w-sm bg-[#D4AF37] hover:bg-[#E5C158] text-[#0f0f14] font-bold text-xl px-10 py-7 rounded-xl pulse-gold transition-all hover:scale-105 shadow-xl shadow-[#D4AF37]/25"
+              >
+                Quero entender isso melhor
+              </Button>
+
+              {/* VALUE BLOCK */}
+              <div className="flex flex-col items-center text-center leading-tight">
+                <span className="text-lg font-bold text-[#D4AF37] tracking-wide">
+                  EVENTO 100% GRATUITO
+                </span>
+                <span className="text-xs text-muted-foreground opacity-80">
+                  Sem custo de participação
+                </span>
+              </div>
+
+            </motion.div>
+
+            {/* INFO BLOCK (AGORA INCLUÍDO NO MOBILE TAMBÉM) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-wrap items-center justify-center gap-3 mt-6 text-sm sm:text-base opacity-90"
+            >
+
+              <div className="flex items-center gap-2 px-3 py-2 rounded-xl glass border-white/5">
+                <span className="text-[#D4AF37] font-semibold">
+                  Ao vivo e presencial
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Calendar className="w-4 h-4 text-[#D4AF37]" />
+                <span className="font-medium">14 de Maio</span>
+              </div>
+
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="w-4 h-4 text-[#D4AF37]" />
+                <span>Colombo - PR</span>
+              </div>
+
+            </motion.div>
+
+          </div>
         </div>
 
         {/* DESKTOP LAYOUT */}
-        <div className="hidden lg:block max-w-3xl lg:max-w-2xl">
+        <div className="hidden lg:block max-w-4xl lg:max-w-3xl">
           {/* Lot Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -155,7 +193,9 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
             </span>
-            <span className="text-sm font-semibold text-[#D4AF37]">LOTE 01 - Vagas Limitadas</span>
+            <span className="text-sm font-semibold text-[#D4AF37] tracking-wide">
+             Acesso limitado nesta edição
+            </span>
           </motion.div>
 
           {/* Main Headline */}
@@ -163,61 +203,92 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight mb-6 text-balance"
+            className="text-5xl lg:text-6xl xl:text-6xl font-extrabold leading-[1.05] tracking-tight mb-8 text-balance"
           >
-            <span className="text-gold-gradient">GARANTA SEU INGRESSO</span>
-            <br />
-            <span className="text-foreground">NO LOTE 01</span>
+            <span className="text-gold-gradient block">
+              NÃO É FALTA DE ESFORÇO
+            </span>
+
+            <span className="text-foreground block mt-2">
+              É UM PADRÃO INVISÍVEL QUE ESTÁ TRAVANDO SUA VIDA
+            </span>
           </motion.h1>
 
+
           {/* Subheadline */}
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl lg:text-2xl text-muted-foreground max-w-xl mb-8 leading-relaxed text-balance"
           >
-            1 dia para você se libertar de todas as feridas emocionais e travas que te impedem de ter uma vida próspera e feliz...
-          </motion.p>
+            Você já tentou mudar de estratégia…  
+            <br />
+            Deu seu máximo, recomeçou várias vezes…  
+            <br />
+            Mas nada realmente muda.
 
-          {/* Event Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center gap-6 mb-8 text-lg"
-          >
-            <div className="flex items-center gap-2 px-4 py-2 rounded-xl glass border-white/5">
-              <span className="text-[#D4AF37] font-semibold">Ao vivo e presencial</span>
+            <div className="mt-4 text-[#D4AF37] font-medium">
+              E quanto mais você tenta, mais parece que está preso num ciclo que se repete.
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Calendar className="w-5 h-5 text-[#D4AF37]" />
-              <span className="font-medium">26/04 às 9h</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MapPin className="w-5 h-5 text-[#D4AF37]" />
-              <span>Blumenau - SC</span>
+
+            <div className="mt-4 text-base lg:text-lg text-muted-foreground">
+              E é isso que você vai descobrir neste encontro.
             </div>
           </motion.div>
 
-          {/* Primary CTA */}
+          {/* CTA + VALUE SIDE BY SIDE (FOCO PRINCIPAL) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex items-start gap-4"
+            className="flex flex-col gap-5"
           >
-            <Button
-              onClick={scrollToCTA}
-              size="lg"
-              className="bg-[#D4AF37] hover:bg-[#E5C158] text-[#0f0f14] font-bold text-lg px-10 py-7 rounded-xl pulse-gold transition-all hover:scale-105 shadow-xl shadow-[#D4AF37]/25"
-            >
-              Garantir vaga agora
-            </Button>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <span className="text-sm">Por apenas</span>
-              <span className="text-2xl font-bold text-[#D4AF37]">R$ 47</span>
+
+            {/* BOTÃO + VALOR */}
+            <div className="flex items-center gap-6">
+
+              <Button
+                onClick={scrollToCTA}
+                size="lg"
+                className="bg-[#D4AF37] hover:bg-[#E5C158] text-[#0f0f14] font-bold text-lg px-10 py-7 rounded-xl pulse-gold transition-all hover:scale-105 shadow-xl shadow-[#D4AF37]/25"
+              >
+                Quero entender isso melhor
+              </Button>
+
+              {/* VALUE BLOCK AO LADO */}
+              <div className="flex flex-col leading-tight">
+                <span className="text-xl font-bold text-[#D4AF37] tracking-wide">
+                  EVENTO 100% GRATUITO
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  Sem custo de participação
+                </span>
+              </div>
+
             </div>
+
+            {/* INFO BLOCK ABAIXO */}
+            <div className="flex items-center gap-6 mt-3 opacity-90">
+
+              <div className="flex items-center gap-2 px-4 py-2 rounded-xl glass border-white/5">
+                <span className="text-[#D4AF37] font-semibold">
+                  Ao vivo e presencial
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Calendar className="w-5 h-5 text-[#D4AF37]" />
+                <span className="font-medium">14 de Maio</span>
+              </div>
+
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="w-5 h-5 text-[#D4AF37]" />
+                <span>Colombo - PR</span>
+              </div>
+
+            </div>
+
           </motion.div>
         </div>
       </div>

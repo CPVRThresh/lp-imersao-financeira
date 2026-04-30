@@ -8,28 +8,28 @@ const steps = [
     number: '01',
     icon: Search,
     title: 'Identificação',
-    description: 'Descubra as crenças limitantes que estão programadas no seu inconsciente desde a infância.',
+    description: 'Perceba padrões que passam despercebidos — e comece a entender o que realmente conduz suas decisões.',
     color: 'from-[#D4AF37]/20 to-[#D4AF37]/5',
   },
   {
     number: '02',
     icon: Unlock,
     title: 'Desbloqueio',
-    description: 'Libere as emoções e memórias que mantêm esses padrões ativos em sua vida.',
+    description: 'Interrompa o que mantém isso ativo — e veja por que certas reações continuam acontecendo.',
     color: 'from-[#D4AF37]/25 to-[#D4AF37]/5',
   },
   {
     number: '03',
     icon: RefreshCw,
     title: 'Reprogramação',
-    description: 'Instale novas crenças de abundância e prosperidade através de técnicas comprovadas.',
+    description: 'Mude a forma como sua mente responde — criando novos padrões que passam a influenciar suas escolhas.',
     color: 'from-[#D4AF37]/30 to-[#D4AF37]/5',
   },
   {
     number: '04',
     icon: Rocket,
     title: 'Expansão',
-    description: 'Integre sua nova mentalidade com ações práticas para resultados tangíveis.',
+    description: 'Leve isso para o dia a dia — e perceba mudanças reais na forma como você decide e se posiciona.',
     color: 'from-[#D4AF37]/35 to-[#D4AF37]/5',
   },
 ]
@@ -47,12 +47,12 @@ export function MethodologySection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            A <span className="text-gold-gradient">Metodologia</span> que{' '}
+            Como a <span className="text-gold-gradient">mudança</span> {' '}
             <br className="hidden sm:block" />
-            transforma de dentro para fora
+            realmente acontece
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Um processo estruturado para reprogramar sua relação com o dinheiro em 4 etapas.
+            Um processo simples que torna visível, quebra e reconstrói os padrões que influenciam seus resultados.
           </p>
         </motion.div>
 

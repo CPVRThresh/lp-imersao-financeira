@@ -25,7 +25,7 @@ export default function LandingPage() {
       <main className="relative min-h-screen overflow-x-hidden">
         {/* 1. Hero Section - Visual Impact & Promise */}
         <Hero />
-        
+                
         {/* 2. Event Section - O que será esse evento? */}
         <EventSection />
         

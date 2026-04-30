@@ -17,22 +17,22 @@ const painPoints = [
   {
     icon: Repeat,
     title: 'Padrões Repetitivos',
-    description: 'Sempre que junta dinheiro, algo acontece e você precisa gastar.',
+    description: 'Você até consegue juntar dinheiro… mas algo sempre acontece e te faz voltar ao mesmo ponto.',
   },
   {
     icon: Lock,
     title: 'Bloqueios Invisíveis',
-    description: 'Sente que algo te impede de alcançar o próximo nível.',
+    description: 'Existe uma sensação de limite que te impede de avançar, mesmo sem um motivo claro.',
   },
   {
     icon: AlertCircle,
     title: 'Ansiedade Financeira',
-    description: 'Pensar em dinheiro gera desconforto, medo ou culpa.',
+    description: 'Pensar em dinheiro traz desconforto, pressão ou até medo.',
   },
   {
     icon: Wallet,
     title: 'Autossabotagem',
-    description: 'Você sabe o que fazer, mas não consegue se manter consistente.',
+    description: 'Você sabe o que fazer, mas manter consistência se torna o maior desafio.',
   },
 ]
 
@@ -74,11 +74,8 @@ export function PainSection() {
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight text-balance">
             Você se <span className="text-gold-gradient">reconhece</span> em alguma{' '}
-            dessas situações?
+            dessas situações do seu dia a dia?
           </h2>
-          <p className="text-muted-foreground text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto leading-relaxed text-balance">
-            São sinais de que padrões inconscientes estão controlando sua relação com o dinheiro.
-          </p>
         </motion.div>
 
         {/* Pain Points Grid - 2x3 on mobile, 3x2 on desktop */}
@@ -125,10 +122,12 @@ export function PainSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-10 sm:mt-14 text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto text-balance"
         >
-          Se você se identificou com pelo menos uma dessas situações,{' '}
-          <span className="text-foreground font-medium">
-            a raiz do problema pode ser mais profunda do que você imagina.
-          </span>
+        <span className="text-foreground">
+          talvez o problema não esteja no que você faz…
+        </span>{' '}
+        <span className="text-[#D4AF37] font-semibold">
+          mas na forma como você foi condicionado a fazer.
+        </span>
         </motion.p>
       </div>
     </section>

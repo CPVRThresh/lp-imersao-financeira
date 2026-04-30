@@ -7,32 +7,32 @@ const learningTopics = [
   {
     icon: Dna,
     title: 'Reprogramação Geracional',
-    description: 'Identifique e quebre padrões herdados de escassez.',
+    description: 'Perceba padrões que não começaram com você — mas continuam influenciando suas decisões.',
   },
   {
     icon: Brain,
     title: 'PNL Avançada',
-    description: 'Técnicas para reprogramar crenças limitantes.',
+    description: 'Entenda como sua mente cria padrões automáticos que moldam suas escolhas.',
   },
   {
     icon: TrendingUp,
     title: 'Inteligência Financeira',
-    description: 'Desenvolva uma mentalidade de abundância.',
+    description: 'Mude a forma como você enxerga dinheiro — e como você se posiciona diante dele.',
   },
   {
     icon: Heart,
     title: 'Relacionamentos & Dinheiro',
-    description: 'Como suas relações afetam sua vida financeira.',
+    description: 'Veja como suas relações impactam silenciosamente sua vida financeira.',
   },
   {
     icon: Unlock,
     title: 'Libertação de Vícios',
-    description: 'Livre-se de comportamentos compulsivos.',
+    description: 'Reconheça comportamentos que se repetem — mesmo quando você tenta mudar.',
   },
   {
     icon: Award,
     title: 'Autoconfiança e Merecimento',
-    description: 'Reprograme sua mente para se sentir digno de receber e manter a riqueza que você deseja.',
+    description: 'Perceba como sua autoimagem influencia o quanto você permite receber e manter.',
   },
 ]
 
@@ -73,11 +73,10 @@ export function LearningSection() {
           className="text-center mb-8 lg:mb-12"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight text-balance">
-            O que você irá{' '}
-            <span className="text-gold-gradient">aprender</span>
+            O que se torna <span className="text-gold-gradient">possível</span> a partir disso{' '}
           </h2>
           <p className="text-muted-foreground text-lg sm:text-xl lg:text-2xl max-w-2xl mx-auto leading-relaxed text-balance">
-            Uma transformação completa em todas as áreas que impactam sua prosperidade.
+            Essas mudanças não ficam só na forma como você pensa — elas começam a aparecer na forma como você decide, reage e se posiciona.
           </p>
         </motion.div>
 
